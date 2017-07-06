@@ -24,32 +24,32 @@ function sg_register_meta_boxes( $meta_boxes ) {
 
 	$meta_boxes[] = array(
 		// Meta box id, UNIQUE per meta box. Optional since 4.1.5
-		'id'         => 'portfolio-mb-detail',
+		'id' => 'portfolio-mb-detail',
 		
 		// Meta box title - Will appear at the drag and drop handle bar. Required.
-		'title'      => esc_html__( 'Dettagli', 'sg' ),
+		'title' => esc_html__( 'Dettagli', 'sg' ),
 
         // Post types, accept custom post types as well - DEFAULT is 'post'. Can be array (multiple post types) or string (1 post type). Optional.
         'post_types' => array('portfolio'),
 		
 		// Where the meta box appear: normal (default), advanced, side. Optional.
-		'context'    => 'normal',
+		'context' => 'normal',
 
 		'fields' => array(
 			array(
-				'id'               => $prefix . 'image_advanced',
-				'name'             => esc_html__( 'Immagini', 'sg' ),
-				'type'             => 'image_advanced',
+				'id' => $prefix . 'image_advanced',
+				'name' => esc_html__( 'Immagini', 'sg' ),
+				'type' => 'image_advanced',
 
 				// Delete image from Media Library when remove it from post meta?
 				// Note: it might affect other posts if you use same image for multiple posts
-				'force_delete'     => false,
+				'force_delete' => false,
 
 				// Maximum image uploads
 				'max_file_uploads' => 10,
 
 				// Display the "Uploaded 1/2 files" status
-				'max_status'       => false,
+				'max_status' => false,
 			),
 		),
 	);
