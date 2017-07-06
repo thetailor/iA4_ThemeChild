@@ -1,0 +1,229 @@
+@charset "UTF-8";
+/*!
+Theme Name: iA4 Child
+Template: iA4
+Theme URI: http://store.ia.net/
+Author: iA, Inc.
+Author URI: http://ia.net/
+Description: An ultra-minimalist WordPress Theme by iA.
+Version: 1.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: iA4
+Tags: white, one-column, responsive-layout, custom-header, custom-menu, featured-image-header, theme-options, translation-ready, flexible-header
+
+This theme is licensed under the GPL, and is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+
+*/
+
+/* @import url("../iA4/style.css"); */
+
+/*
+ Grid
+ layout/_grid.scss
+ ----------------------------- */
+
+.grid-padded {
+    margin-left:-1rem;
+    margin-right:-1rem;
+  }
+  .grid-padded .grid {
+    border-spacing:1rem 0;
+  }
+
+.table-align-middle .table-cell {
+  vertical-align:middle !important;
+}
+
+.table-reverse {
+  direction:rtl;
+}
+
+.table-reverse .table-cell {
+  direction:ltr;
+}
+
+/*
+ Header
+ layout/_header.scss
+ ----------------------------- */
+
+/* Logo Centered
+header .logo-and-navigation #logo {
+    float:none;
+  }
+  header .logo-and-navigation #logo a.header-logo {
+      float:none;
+      display:block;
+    }
+    header .logo-and-navigation #logo a.header-logo img {
+      display:block;
+      max-height:inherit;
+      margin:0 auto;
+    }
+  header .logo-and-navigation #logo a.header-text {
+    display:none;
+  }
+*/
+
+header .logo-and-navigation #logo a.header-logo {
+    display:block;
+  }
+  header .logo-and-navigation #logo a.header-logo img {
+    display:block;
+    max-height:inherit;
+  }
+header .logo-and-navigation #logo a.header-text {
+  display:none;
+}
+
+/*
+ Navigation
+ navigation/_navigation.scss
+ ----------------------------- */
+
+/* Navigation Centered
+header .logo-and-navigation .navigation {
+    float:none;
+    width:initial;
+    z-index:initial;
+  }
+  header .logo-and-navigation .navigation .menu-wrapper {
+    float:none;
+    width:initial;
+  }
+  header .logo-and-navigation .navigation .main-navigation {
+      float:none;
+      clear:initial;
+      width:initial;
+    }
+    header .logo-and-navigation .navigation .main-navigation .main-menu-wrapper {
+        float:none;
+        text-align:center;
+      }
+      header .logo-and-navigation .navigation .main-navigation .main-menu-wrapper ul {
+        float:none;
+      }
+      header .logo-and-navigation .navigation .main-navigation .main-menu-wrapper ul li {
+        float:none; display:inline-block;
+      }
+      header .logo-and-navigation .navigation .main-navigation .main-menu-wrapper ul li a {
+        margin:0 5px;
+      }
+*/
+
+header .logo-and-navigation {
+  height:100px;
+}
+@media only screen and (max-width: 767px) {
+  header .logo-and-navigation {
+    height:auto;
+  }
+}
+header .logo-and-navigation .mobile-menu {
+  border-radius:0px;
+}
+header .logo-and-navigation .navigation .main-navigation .main-menu-wrapper ul li:first-child a {
+  margin-left:0;
+}
+header .logo-and-navigation .navigation .main-navigation .main-menu-wrapper ul li.current_page_item a {
+  background:none;
+  text-shadow:none;
+  font-weight:bold;
+}
+@media only screen and (max-width: 767px) {
+  header .logo-and-navigation .navigation .main-navigation .main-menu-wrapper ul li:first-child a {
+    border-top:1px solid #222;
+  }
+}
+
+/*
+ Navigation | Search
+ navigation/_navigation.scss
+ ----------------------------- */
+
+header .logo-and-navigation .search,
+header .logo-and-navigation .search-field {
+  display:none;
+}
+header .logo-and-navigation .search-field input#search-term {
+  position:absolute;
+  bottom:0;
+  border:none;
+  outline:none;
+  display:inline-block;
+  height:32px;
+  padding-right:32px;
+  padding-left:0;
+  border-radius:0px;
+  border-bottom:2px solid #222;
+  line-height:32px;
+}
+@media only screen and (min-width: 768px) {
+  header .logo-and-navigation .search-field input#search-term {
+    padding-top:0px;
+    padding-bottom:0px;
+    border-bottom:0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header .logo-and-navigation .search-field input#search-term {
+    font-size:16px;
+    padding:8px 0;
+    height:auto;
+    position:relative;
+    display:inline-block;
+    border:none;
+    font-style:normal;
+    -webkit-appearance:none;
+    width:100%;
+    border-bottom:0;
+    border-top:1px solid #222;
+    background:url("/wp-content/themes/iA4/img/icn-search.svg") no-repeat right center !important;
+    background-size:16px !important;
+    line-height:25px;
+  }
+}
+header .logo-and-navigation .search-field a.search-x {
+  top:-2px;
+  margin:0;
+  padding:0;
+  font-size:32px;
+}
+body.searching header .logo-and-navigation .main-menu-wrapper {
+  width:auto;
+}
+@media only screen and (max-width: 767px) {
+  body.searching header .logo-and-navigation .main-menu-wrapper {
+    width:100%;
+  }
+  body.searching header .logo-and-navigation .search-field {
+    position:static;
+  }
+}
+
+/*
+ Portfolio
+ site/primary/_portfolio.scss
+ ----------------------------- */
+
+@media only screen and (min-width: 993px) {
+  .tile {
+    width:calc(50% - 25px);
+  }
+}
+.tile a,
+.tile div {
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+.tile a img,
+.tile div img {
+  display:block;
+  visibility:hidden;
+}
+.tile-pan {
+  padding-bottom:0;
+}
+
