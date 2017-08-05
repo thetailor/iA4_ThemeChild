@@ -55,17 +55,15 @@
                             </div><!--end logo-->
                         <?php else : ?>
                             <a href="<?php echo esc_url(home_url('/')); ?>" rel="home" aria-label="Home" class="header-text">
-                                <span class="header-title-text"><?php bloginfo('name'); ?></span><!-- end header-text-logo-->
+                                <span class="header-title-text"><?php echo str_replace(' ', '<br>', get_bloginfo('name')); ?></span><!-- end header-text-logo-->
                                 <span class="header-description-text"><?php bloginfo('description'); ?></span><!-- header-description -->
                             </a><!-- end header-text-->
-                            <?php if(ia4_display_header_menu()) : ?>
-                                <div class="mobile-menu js-action" data-action="toggleMenu"><?php _e('Menu', 'ia4'); ?></div>
-                            <?php endif; ?>
                         <?php endif; // End header image check. ?>
                         </div><!--end header-bg-->
                     </div><!--end col small-->
                     <?php if(ia4_display_header_menu()) : ?>
                     <div class="col large table-cell">
+                        <div class="mobile-menu js-action" data-action="toggleMenu"><!--<?php _e('Menu', 'ia4'); ?>--></div>
                         <div class="navigation original">
                             <div class="menu-wrapper">
                                 <nav id="site-navigation" class="main-navigation">

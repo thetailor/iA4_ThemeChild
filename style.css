@@ -77,6 +77,14 @@ header .logo-and-navigation #logo a.header-text {
   display:none;
 }
 
+header .header-text .header-title-text {
+  font-size:36px;
+  line-height:1em;
+}
+header .header-text .header-description-text {
+  display:none;
+}
+
 /*
  Navigation
  navigation/_navigation.scss
@@ -121,7 +129,24 @@ header .logo-and-navigation {
   }
 }
 header .logo-and-navigation .mobile-menu {
+  width:50px;
+  height:10px;
+  padding:4px;
+  top:32px;
+  right:12.5px;
+  border:0;
+  border-top:1px solid #000;
+  border-bottom:1px solid #000;
   border-radius:0px;
+}
+@media only screen and (max-width: 767px) {
+  body.menu-open .mobile-menu {
+    background:none;
+  }
+}
+header .logo-and-navigation .navigation .main-navigation .main-menu-wrapper ul li a {
+  font-size:16px;
+  font-style:normal;
 }
 header .logo-and-navigation .navigation .main-navigation .main-menu-wrapper ul li:first-child a {
   margin-left:0;
